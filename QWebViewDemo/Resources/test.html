@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+
+    <script type="text/javascript" src="E:\\ZHD\\ZHDCloudService\\QWebviewDemo\\Resources\\qwebchannel.js"></script>
+    <script type="text/javascript">
+        var context;
+        console.log("loading");
+
+        function init() {
+            if (typeof qt != undefined) {
+                new QWebChannel(qt.webChannelTransport, function (channel) {
+                    //Qt 类交互对象
+                    context = channel.objects.context;
+                    //按钮点击事件
+                    document.getElementById("send").onclick = function () {
+                        alert("test");
+                        var input = document.getElementById("input");
+                        context.recvMsgSlot("hello");
+                    }
+
+                    context.sendStringSignal.connect(function (str) {
+                        alert(str);
+                    })
+
+                    context.recvMsgSlot("send data");
+                });
+            } else {
+                alert("qt 对象获取失败");
+            }
+        }
+
+        window.onload = init;
+    </script>
+</head>
+
+<body>
+
+    <p>hello</p>
+    <input type="button" value="click" id="send">
+    <input type="text" name="hello" id="input">
+</body>
+
+</html>

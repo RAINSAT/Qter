@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/QWebviewDemo">
+        <file>Resources/qwebchannel.js</file>
+        <file>Resources/utils.js</file>
+        <file>Resources/addCiccle.js</file>
+    </qresource>
+</RCC>
