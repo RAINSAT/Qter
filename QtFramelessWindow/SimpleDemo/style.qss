@@ -1,0 +1,7 @@
+QSpinBox {
+    border: 1px solid #7A7A7A;
+}
+
+QSpinBox:edit-focus {
+    bordr: 1px solid #0077D5;
+}

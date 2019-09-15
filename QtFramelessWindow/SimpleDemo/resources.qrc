@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>logo.png</file>
+        <file>icon.ico</file>
+        <file>qt_zh_CN.qm</file>
+        <file>zh_CN.qm</file>
+        <file>style.qss</file>
+        <file>FontAwesome.otf</file>
+        <file>item1.png</file>
+        <file>item2.png</file>
+        <file>item3.png</file>
+        <file>item4.png</file>
+    </qresource>
+</RCC>
